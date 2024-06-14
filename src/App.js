@@ -10,7 +10,7 @@ const query = gql`
 
 function App() {
   const [loading, data] = useQuery(query);  
-  console.log({loading,data});
+  console.log(data);
   return <h1>App</h1>;
 }
 
