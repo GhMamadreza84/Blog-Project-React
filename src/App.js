@@ -1,4 +1,8 @@
+import { gql } from "@apollo/client";
 
+const query = gql`
+
+`
 
 function App() {
   return (
