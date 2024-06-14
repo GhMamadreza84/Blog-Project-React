@@ -1,6 +1,6 @@
 import { gql, useQuery } from "@apollo/client";
 
-const query = gql`
+const QUERY = gql`
   query {
     authors {
       name
@@ -9,7 +9,7 @@ const query = gql`
 `;
 
 function App() {
-  const [loading, data] = useQuery(query);  
+  const [loading, data] = useQuery(QUERY);  
   console.log(data);
   return <h1>App</h1>;
 }
