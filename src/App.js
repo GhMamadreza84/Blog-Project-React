@@ -1,17 +1,16 @@
-import { gql } from "@apollo/client";
+import { gql, useQuery } from "@apollo/client";
 
 const query = gql`
-query{
-  authors{
-
+  query {
+    authors {
+      name
+    }
   }
-}
-`
+`;
 
 function App() {
-  return (
-    <h1>App</h1>
-  );
+  const [loading, data] = useQuery(query);  
+  return <h1>App</h1>;
 }
 
 export default App;
