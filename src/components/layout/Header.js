@@ -1,10 +1,11 @@
 import React from 'react'
+import { AppBar } from '@mui/material'
 
 function Header() {
   return (
-    <div>
-      header
-    </div>
+    <AppBar>
+
+    </AppBar>
   )
 }
 
