@@ -4,7 +4,7 @@ import BookIcon from "@mui/icons-material/Book";
 function Header() {
   return (
     <AppBar position="sticky">
-      <Container>
+      <Container maxWidth="lg">
         <Toolbar>
           <Typography component="h1" variant="h5" flex={1}>
             وبلاگ محمدرضا قدیری
