@@ -3,7 +3,7 @@ import { AppBar } from '@mui/material'
 
 function Header() {
   return (
-    <AppBar>
+    <AppBar position="sticky">
 
     </AppBar>
   )
