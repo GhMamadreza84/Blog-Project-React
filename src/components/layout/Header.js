@@ -5,7 +5,8 @@ function Header() {
   return (
     <AppBar position="sticky">
       <Toolbar>
-        <Typography component="h1" variant="h5"></Typography>
+        <Typography component="h1" variant="h5">وبلاگ محمدرضا قدیری</Typography>
+        
       </Toolbar>
     </AppBar>
   );
