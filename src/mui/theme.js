@@ -9,6 +9,7 @@ const theme = createTheme({
     fontWeightHeavy: 800,
     fontWeightFat: 900,
   },
+  direction: "rtl",
 });
 
 export default theme;
