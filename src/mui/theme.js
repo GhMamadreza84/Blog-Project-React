@@ -1,2 +1,6 @@
 import { createTheme } from "@mui/material";
-const theme = createTheme({});
+const theme = createTheme({
+  typography:{
+    fontFamily:`"YekanBakh" , "Roboto" , "Arial"`
+  }
+});
