@@ -1,10 +1,11 @@
 import React from 'react'
+import { Container } from '@mui/material'
 
 function HomePage() {
   return (
-    <div>
-      
-    </div>
+    <Container>
+
+    </Container>
   )
 }
 
