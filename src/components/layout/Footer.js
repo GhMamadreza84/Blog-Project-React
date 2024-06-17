@@ -4,8 +4,8 @@ import React from 'react'
 function Footer() {
   return (
     <footer>
-      <Typography>
-        
+      <Typography component="p" variant='p' bgcolor="#f7f7f7" color="primary">
+
       </Typography>
     </footer>
   )
