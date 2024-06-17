@@ -9,7 +9,6 @@ function Header() {
           <Typography component="h1" variant="h5" flex={1}>
             وبلاگ محمدرضا قدیری
           </Typography>
-          <h1>محمدرضا</h1>
           <BookIcon />
         </Toolbar>
       </Container>
