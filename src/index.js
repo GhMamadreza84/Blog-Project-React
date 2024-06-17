@@ -10,7 +10,7 @@ import "./styles/index.css";
 import "./styles/fonts.css";
 
 const client = new ApolloClient({
-  uri: process.env.,
+  uri: process.env.REACT_APP_GRAPHCMS_URI, 
   cache: new InMemoryCache(),
 });
 
