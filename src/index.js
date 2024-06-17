@@ -10,7 +10,7 @@ import "./styles/index.css";
 import "./styles/fonts.css";
 
 const client = new ApolloClient({
-  uri: "",
+  uri: process.env.,
   cache: new InMemoryCache(),
 });
 
