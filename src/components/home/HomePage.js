@@ -6,7 +6,7 @@ function HomePage() {
     <Container maxWidth="lg">
       <Grid container>
         <Grid item>
-          <Typography>نویسنده ها</Typography>
+          <Typography component="h3" variant="h5" mb={3}>نویسنده ها</Typography>
         </Grid>
         <Grid item>
           <Typography>مقالات</Typography>
