@@ -6,7 +6,7 @@ function Header() {
     <AppBar position="sticky">
       <Container maxWidth="lg">
         <Toolbar>
-          <Typography component="h1" variant="h5" flex={1}>
+          <Typography component="h1" variant="h5" fontWeight="700" flex={1}>
             وبلاگ محمدرضا قدیری
           </Typography>
           <BookIcon />
