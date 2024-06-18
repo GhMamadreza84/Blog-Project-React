@@ -3,6 +3,7 @@ import { Grid } from "@mui/material";
 import { useQuery } from "@apollo/client";
 
 import { GET_BLOGS_INFO } from "../../graphql/queries";
+import CardEL from "../shared/CardEL";
 
 function Blogs() {
   const { loading, data, errors } = useQuery(GET_BLOGS_INFO);
@@ -12,24 +13,11 @@ function Blogs() {
   console.log(data);
   return (
     <Grid container spacing={2}>
-      <Grid item xs={12} sm={6} md={4}>
-        Item
-      </Grid>
-      <Grid item xs={12} sm={6} md={4}>
-        Item
-      </Grid>
-      <Grid item xs={12} sm={6} md={4}>
-        Item
-      </Grid>
-      <Grid item xs={12} sm={6} md={4}>
-        Item
-      </Grid>
-      <Grid item xs={12} sm={6} md={4}>
-        Item
-      </Grid>
-      <Grid item xs={12} sm={6} md={4}>
-        Item
-      </Grid>
+      {data.posts.map((post) => (
+        <Grid item xs={12} sm={6} md={4}>
+          <CardEL />
+        </Grid>
+      ))}
     </Grid>
   );
 }
