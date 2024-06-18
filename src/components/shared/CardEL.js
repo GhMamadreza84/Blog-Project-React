@@ -7,11 +7,12 @@ import {
   CardMedia,
 } from "@mui/material";
 
-function CardEL(props) {
+function CardEL({ title, slug, coverPhoto, author }) {
   console.log(props);
   return (
     <Card sx={{ boxShadow: "rgba(0,0,0,0.1) 0px 4px 12px", borderRadius: 4 }}>
-      <CardHeader />
+      <CardHeader
+      avatar />
       <CardMedia />
       <CardContent></CardContent>
       <CardActions></CardActions>
