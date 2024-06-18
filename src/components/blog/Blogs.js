@@ -10,13 +10,28 @@ function Blogs() {
   if (loading) return <h3>Loading ...</h3>;
   if (errors) return <h3>Error ...</h3>;
   console.log(data);
-  return 
-  <Grid container spacing={2}>
-    <Grid item xs={12} sm={6} md={4}>
-
+  return (
+    <Grid container spacing={2}>
+      <Grid item xs={12} sm={6} md={4}>
+        Item
+      </Grid>
+      <Grid item xs={12} sm={6} md={4}>
+        Item
+      </Grid>
+      <Grid item xs={12} sm={6} md={4}>
+        Item
+      </Grid>
+      <Grid item xs={12} sm={6} md={4}>
+        Item
+      </Grid>
+      <Grid item xs={12} sm={6} md={4}>
+        Item
+      </Grid>
+      <Grid item xs={12} sm={6} md={4}>
+        Item
+      </Grid>
     </Grid>
-  </Grid>
-  ;
+  );
 }
 
 export default Blogs;
