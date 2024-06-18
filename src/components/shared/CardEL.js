@@ -1,6 +1,7 @@
 import React from "react";
 import {
   Avatar,
+  Button,
   Card,
   CardActions,
   CardContent,
@@ -39,8 +40,16 @@ function CardEL({ title, slug, coverPhoto, author }) {
           {title}
         </Typography>
       </CardContent>
-      <Divider variant="middle" />
-      <CardActions></CardActions>
+      <Divider variant="middle" sx={{ margin: "10px" }} />
+      <CardActions>
+        <Button
+          variant="outlined"
+          size="small"
+          sx={{ width: "100%", borderRadius: 3 }}
+        >
+          مطالعه مقاله
+        </Button>
+      </CardActions>
     </Card>
   );
 }
