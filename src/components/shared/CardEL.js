@@ -1,11 +1,15 @@
 import React from 'react'
+import { CardActions, CardContent, CardHeader, CardMedia } from '@mui/material'
 
 function CardEL(props) {
   console.log(props)
   return (
-    <div>
-      {props.title}
-    </div>
+    <Card>
+      <CardHeader />
+      <CardMedia />
+      <CardContent></CardContent>
+      <CardActions></CardActions>
+    </Card>
   )
 }
 
