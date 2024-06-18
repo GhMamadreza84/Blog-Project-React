@@ -18,3 +18,5 @@ const GET_BLOGS_INFO = gql`
     }
   }
 `;
+
+export default GET_BLOGS_INFO;
