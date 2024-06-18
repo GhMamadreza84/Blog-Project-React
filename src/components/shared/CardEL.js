@@ -1,9 +1,10 @@
 import React from 'react'
 
-function CardEL() {
+function CardEL(props) {
+  console.log(props)
   return (
     <div>
-      CardEl
+      {props.title}
     </div>
   )
 }
