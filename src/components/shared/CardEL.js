@@ -6,6 +6,7 @@ import {
   CardContent,
   CardHeader,
   CardMedia,
+  Divider,
   Typography,
 } from "@mui/material";
 
@@ -17,7 +18,7 @@ function CardEL({ title, slug, coverPhoto, author }) {
       <CardHeader
         avatar={<Avatar src={author.avatar.url} sx={{ marginLeft: 2 }} />}
         title={
-          <Typography component="p" variant="p" color="text.primary">
+          <Typography component="p" variant="p" color="text.secoundary">
             {author.name}
           </Typography>
         }
@@ -28,7 +29,17 @@ function CardEL({ title, slug, coverPhoto, author }) {
         image={coverPhoto.url}
         alt={slug}
       />
-      <CardContent></CardContent>
+      <CardContent>
+        <Typography
+          component="h3"
+          variant="h6"
+          color="text.primary"
+          fontWeight={600}
+        >
+          {title}
+        </Typography>
+      </CardContent>
+      <Divider variant="middle" />
       <CardActions></CardActions>
     </Card>
   );
