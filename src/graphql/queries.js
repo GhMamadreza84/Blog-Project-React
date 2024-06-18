@@ -3,20 +3,20 @@ import { gql } from "@apollo/client";
 const GET_BLOGS_INFO = gql`
   query {
     posts {
-      author {
-        name
-        avatar {
-          url
-        }
-      }
       title
       slug
       id
       coverPhoto {
         url
       }
+      author {
+        avatar {
+          url
+        }
+        name
+      }
     }
   }
 `;
 
-export {GET_BLOGS_INFO} ;
+export { GET_BLOGS_INFO };
