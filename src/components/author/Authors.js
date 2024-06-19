@@ -16,7 +16,7 @@ function Authors() {
       sx={{ boxShadow: "rgba(0,0,0,0.1) 0px 4px 12px", borderRadius: 4 }}
     >
       {authors.map((author) => (
-        <Grid item xs={12} padding={2}>
+        <Grid item xs={12} padding={2} key={author.id}>
           <a
             href={`/authors/${author.slug}`}
             style={{
@@ -25,7 +25,7 @@ function Authors() {
               textDecoration: "none",
             }}
           >
-            <Avatar src={author.avatar.url} />
+            <Avatar src={author.avatar.url} sx={{ marginLeft: 2 }} />
             <Typography component="p" variant="p" color="text.color.secoundary">
               {author.name}
             </Typography>
