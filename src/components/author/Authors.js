@@ -15,14 +15,14 @@ function Authors() {
       container
       sx={{ boxShadow: "rgba(0,0,0,0.1) 0px 4px 12px", borderRadius: 4 }}
     >
-      {authors.map((author) => {
+      {authors.map((author) => (
         <Grid item xs={12} padding={2}>
           <Avatar src={author.avatar.url} />
           <Typography component="p" variant="p" color="text.color.secoundary">
             {author.name}
           </Typography>
-        </Grid>;
-      })}
+        </Grid>
+      ))}
     </Grid>
   );
 }
