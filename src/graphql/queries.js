@@ -33,3 +33,4 @@ const GET_AUTHORS_INFO = gql`
 `;
 
 export { GET_BLOGS_INFO };
+export { GET_AUTHORS_INFO };
