@@ -8,7 +8,7 @@ function Authors() {
 
   if (loading) return <h3>Loading ...</h3>;
   if (errors) return <h3>Errors ...</h3>;
-  console.log(data)
+  console.log(data);
   const { authors } = data;
   return (
     <Grid
@@ -18,7 +18,7 @@ function Authors() {
       {authors.map((author) => {
         <Grid item xs={12} padding={2}>
           <Avatar src={author.avatar.url} />
-          <Typography variant="p" component="p" color="text.color.primary">
+          <Typography component="p" variant="p" color="text.color.secoundary">
             {author.name}
           </Typography>
         </Grid>;
