@@ -15,9 +15,9 @@ function Authors() {
       container
       sx={{ boxShadow: "rgba(0,0,0,0.1) 0px 4px 12px", borderRadius: 4 }}
     >
-      {authors.map((author) => (
-        <>
-          <Grid item xs={12} padding={2} key={author.id}>
+      {authors.map((author, index) => (
+        <React.Fragment key={author.id}>
+          <Grid item xs={12} padding={2}>
             <a
               href={`/authors/${author.slug}`}
               style={{
@@ -37,10 +37,12 @@ function Authors() {
               </Typography>
             </a>
           </Grid>
-          <Grid>
-            <Divider />
-          </Grid>
-        </>
+          {index !== authors.length - 1 && (
+            <Grid item xs={12}>
+              <Divider variant="middle" />
+            </Grid>
+          )}
+        </React.Fragment>
       ))}
     </Grid>
   );
