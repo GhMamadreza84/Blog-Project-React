@@ -1,7 +1,7 @@
 import React from "react";
 import { useQuery } from "@apollo/client";
 import { GET_AUTHORS_INFO } from "../../graphql/queries";
-import { Avatar, Grid, Typography } from "@mui/material";
+import { Avatar, Divider, Grid, Typography } from "@mui/material";
 
 function Authors() {
   const { loading, data, errors } = useQuery(GET_AUTHORS_INFO);
@@ -16,21 +16,31 @@ function Authors() {
       sx={{ boxShadow: "rgba(0,0,0,0.1) 0px 4px 12px", borderRadius: 4 }}
     >
       {authors.map((author) => (
-        <Grid item xs={12} padding={2} key={author.id}>
-          <a
-            href={`/authors/${author.slug}`}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              textDecoration: "none",
-            }}
-          >
-            <Avatar src={author.avatar.url} sx={{ marginLeft: 2 }} />
-            <Typography component="p" variant="p" color="text.color.secoundary">
-              {author.name}
-            </Typography>
-          </a>
-        </Grid>
+        <>
+          <Grid item xs={12} padding={2} key={author.id}>
+            <a
+              href={`/authors/${author.slug}`}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                textDecoration: "none",
+                color: "#373737",
+              }}
+            >
+              <Avatar src={author.avatar.url} sx={{ marginLeft: 2 }} />
+              <Typography
+                component="p"
+                variant="p"
+                color="text.color.secoundary"
+              >
+                {author.name}
+              </Typography>
+            </a>
+          </Grid>
+          <Grid>
+            <Divider />
+          </Grid>
+        </>
       ))}
     </Grid>
   );
