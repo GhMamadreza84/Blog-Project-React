@@ -17,10 +17,19 @@ function Authors() {
     >
       {authors.map((author) => (
         <Grid item xs={12} padding={2}>
-          <Avatar src={author.avatar.url} />
-          <Typography component="p" variant="p" color="text.color.secoundary">
-            {author.name}
-          </Typography>
+          <a
+            href={`/authors/${author.slug}`}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              textDecoration: "none",
+            }}
+          >
+            <Avatar src={author.avatar.url} />
+            <Typography component="p" variant="p" color="text.color.secoundary">
+              {author.name}
+            </Typography>
+          </a>
         </Grid>
       ))}
     </Grid>
