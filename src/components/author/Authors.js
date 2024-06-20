@@ -20,7 +20,7 @@ function Authors() {
         <React.Fragment key={author.id}>
           <Grid item xs={12} padding={2}>
             <Link
-              href={`/authors/${author.slug}`}
+              to={`/authors/${author.slug}`}
               style={{
                 display: "flex",
                 alignItems: "center",
