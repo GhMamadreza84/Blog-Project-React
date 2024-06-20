@@ -15,10 +15,11 @@ function Authors() {
     <Grid
       container
       sx={{ boxShadow: "rgba(0,0,0,0.1) 0px 4px 12px", borderRadius: 4 }}
+      mt={1}
     >
       {authors.map((author, index) => (
         <React.Fragment key={author.id}>
-          <Grid item xs={12} padding={2}>
+          <Grid item xs={12} padding={2}> 
             <Link
               to={`/authors/${author.slug}`}
               style={{
