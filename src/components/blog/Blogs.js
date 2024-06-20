@@ -12,9 +12,9 @@ function Blogs() {
   if (errors) return <h3>Error ...</h3>;
   console.log(data);
   return (
-    <Grid container  maxWidth="xl" display="flex" justifyContent="center">
+    <Grid container maxWidth="xl"  display="flex" justifyContent="center">
       {data.posts.map((post) => (
-        <Grid item xs={12} sm={6} md={4} mt={2} key={post.id} margin={3} padding={3}>
+        <Grid item xs={12} sm={6} md={4}  key={post.id} pl={2} mb={1}>
           <CardEL {...post} />
         </Grid>
       ))}
