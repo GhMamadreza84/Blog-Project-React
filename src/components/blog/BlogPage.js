@@ -46,6 +46,9 @@ function BlogPage() {
             <Typography component="p" variant="h5" fontWeight={700}>
               {data.post.author.name}
             </Typography>
+            <Typography component="p" variant="p" color="text.color.secondary">
+              {data.post.author.field}
+            </Typography>
           </Grid>
         </Grid>
       </Grid>
