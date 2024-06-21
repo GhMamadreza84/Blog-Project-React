@@ -26,7 +26,10 @@ function AuthorPage() {
           flexDirection="column"
           alignItems="center"
         >
-          <Avatar src={data.author.avatar.url} />
+          <Avatar
+            src={data.author.avatar.url}
+            sx={{ width: 250, height: 250 }}
+          />
           <Typography component="h3" variant="h5">
             {data.author.name}
           </Typography>
