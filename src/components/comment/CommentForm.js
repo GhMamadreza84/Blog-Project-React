@@ -12,8 +12,14 @@ function CommentForm({ slug }) {
       name,
       email,
       text,
+      slug,
     },
   });
+  const sendHandler = () => {
+    if (name && text && email) {
+      sendComment();
+    }
+  };
   return (
     <Grid
       container
@@ -65,7 +71,9 @@ function CommentForm({ slug }) {
         />
       </Grid>
       <Grid item xs={12} m={2}>
-        <Button variant="contained">ارسال</Button>
+        <Button variant="contained" onClick={sendHandler}>
+          ارسال
+        </Button>
       </Grid>
     </Grid>
   );
