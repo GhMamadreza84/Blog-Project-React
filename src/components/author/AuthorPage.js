@@ -18,11 +18,21 @@ function AuthorPage() {
   console.log(data);
   return (
     <Container maxWidth="lg">
-      <Grid container>
-        <Grid item>
+      <Grid container mt={10}>
+        <Grid
+          item
+          xs={12}
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+        >
           <Avatar src={data.author.avatar.url} />
-          <Typography component="h3" variant="h5">{data.author.name}</Typography>
-          <Typography component="h3" variant="h5">{data.author.field}</Typography>
+          <Typography component="h3" variant="h5">
+            {data.author.name}
+          </Typography>
+          <Typography component="h3" variant="h5">
+            {data.author.field}
+          </Typography>
         </Grid>
       </Grid>
     </Container>
