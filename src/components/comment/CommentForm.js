@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 
 function CommentForm({ slug }) {
   return (
@@ -11,7 +11,13 @@ function CommentForm({ slug }) {
         py: 1,
         mt: 5,
       }}
-    ></Grid>
+    >
+      <Grid item xs={12} m={2}>
+        <Typography component="p" variant="h6" fontWeight={700} color="primary">
+          فرم ارسال کامنت
+        </Typography>
+      </Grid>
+    </Grid>
   );
 }
 
