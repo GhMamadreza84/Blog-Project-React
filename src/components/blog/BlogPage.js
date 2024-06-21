@@ -6,6 +6,7 @@ import { Avatar, Box, Container, Grid, Typography } from "@mui/material";
 import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
 import sanitizeHtml from "sanitize-html";
 import Loader from "../shared/Loader";
+import CommentForm from "../comment/CommentForm";
 function BlogPage() {
   const { slug } = useParams();
   const navigate = useNavigate();
@@ -69,6 +70,9 @@ function BlogPage() {
               }}
             ></div>
           </Grid>
+        </Grid>
+        <Grid item xs={12}>
+          <CommentForm slug={slug} />
         </Grid>
       </Grid>
     </Container>
