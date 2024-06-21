@@ -18,6 +18,8 @@ function CommentForm({ slug }) {
   const sendHandler = () => {
     if (name && text && email) {
       sendComment();
+    } else {
+      
     }
   };
   return (
