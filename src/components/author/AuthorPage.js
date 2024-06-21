@@ -37,8 +37,15 @@ function AuthorPage() {
         </Grid>
         <Grid item xs={12}>
           <div
-            dangerouslySetInnerHTML={{ __html: sanitizeHtml( author.description.html) }}
+            dangerouslySetInnerHTML={{
+              __html: sanitizeHtml(author.description.html),
+            }}
           ></div>
+        </Grid>
+        <Grid item xs={12} mt={6}>
+          <Typography component="h3" variant="h5" fontWeight={700}>
+            مقالات {author.name}
+          </Typography>
         </Grid>
       </Grid>
     </Container>
