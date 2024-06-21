@@ -5,6 +5,7 @@ import { GET_BLOG_INFO } from "../../graphql/queries";
 import { Avatar, Box, Container, Grid, Typography } from "@mui/material";
 import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
 import sanitizeHtml from "sanitize-html";
+import Loader from "../shared/Loader";
 function BlogPage() {
   const { slug } = useParams();
   const navigate = useNavigate();
@@ -14,6 +15,10 @@ function BlogPage() {
     },
   });
   console.log(data);
+
+  if (loading) return <Loader />;
+  if (errors) return <h3>Errors ...</h3>;
+
   return (
     <Container maxWidth="lg">
       <Grid contianer>
