@@ -30,10 +30,10 @@ function AuthorPage() {
             src={data.author.avatar.url}
             sx={{ width: 250, height: 250 }}
           />
-          <Typography component="h3" variant="h5">
+          <Typography component="h3" variant="h5" fontWeight={700} mt={4}>
             {data.author.name}
           </Typography>
-          <Typography component="h3" variant="h5">
+          <Typography component="h3" variant="h5" color="text.secondary" mt={2}>
             {data.author.field}
           </Typography>
         </Grid>
