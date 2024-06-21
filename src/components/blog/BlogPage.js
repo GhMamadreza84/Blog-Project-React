@@ -17,7 +17,9 @@ function BlogPage() {
     <Container maxWidth="lg">
       <Grid contianer>
         <Grid item xs="12" mt={9}>
-          <Typography component="h2" variant="h4" color="primary" fontWeight={700}></Typography>
+          <Typography component="h2" variant="h4" color="primary" fontWeight={700}>
+            {data.post.title}
+          </Typography>
         </Grid>
       </Grid>
     </Container>
