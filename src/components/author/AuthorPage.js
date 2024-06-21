@@ -36,7 +36,9 @@ function AuthorPage() {
           </Typography>
         </Grid>
         <Grid item xs={12}>
-          {author.description.html}
+          <div
+            dangerouslySetInnerHTML={{ __html: author.description.html }}
+          ></div>
         </Grid>
       </Grid>
     </Container>
