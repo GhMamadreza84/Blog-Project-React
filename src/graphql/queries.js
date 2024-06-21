@@ -54,4 +54,25 @@ const GET_AUTHOR_INFO = gql`
     }
   }
 `;
+
+const GET_BLOG_INFO = gql`
+  query getBlogInfo(){
+     post(where: {slug:""}){
+      author{
+        avatar{
+          url
+          }
+        name
+        field
+      }
+      content{
+        html
+      }
+      title
+      coverPhoto{
+        url 
+      }
+     }
+  }
+`;
 export { GET_BLOGS_INFO, GET_AUTHORS_INFO, GET_AUTHOR_INFO };
