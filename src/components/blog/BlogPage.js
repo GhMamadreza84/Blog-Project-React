@@ -10,7 +10,8 @@ function BlogPage() {
       slug,
     },
   });
-  console.log(params);
+  console.log(data);
+  // console.log(params);
   return <div>BlogPage</div>;
 }
 
