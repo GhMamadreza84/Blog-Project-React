@@ -17,6 +17,8 @@ function CommentForm({ slug }) {
       slug,
     },
   });
+  console.log(data);
+
   const sendHandler = () => {
     if (name && text && email) {
       sendComment();
@@ -26,6 +28,12 @@ function CommentForm({ slug }) {
       });
     }
   };
+
+  if(data){
+    toast.success("کامنت ارسال شد و منتظر تایید می باشد",{
+      position:"top-center"
+    })
+  }
   return (
     <Grid
       container
@@ -77,9 +85,13 @@ function CommentForm({ slug }) {
         />
       </Grid>
       <Grid item xs={12} m={2}>
-        <Button variant="contained" onClick={sendHandler}>
-          ارسال
-        </Button>
+        {loading ? (
+          <Button variant="contained" disabled>در حال ارسال ....</Button>
+        ) : (
+          <Button variant="contained" onClick={sendHandler}>
+            ارسال
+          </Button>
+        )}
       </Grid>
       <ToastContainer />
     </Grid>
