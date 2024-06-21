@@ -30,6 +30,9 @@ function BlogPage() {
             sx={{ cursor: "pointer" }}
           />
         </Grid>
+        <Grid item xs={12} mt={6}>
+          <img src={data.post.coverPhoto.url} alt={data.post.slug} />
+        </Grid>
       </Grid>
     </Container>
   );
