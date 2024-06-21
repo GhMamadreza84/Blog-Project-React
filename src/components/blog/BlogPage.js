@@ -1,5 +1,5 @@
-import { useQuery } from "@apollo/client";
 import React from "react";
+import { useQuery } from "@apollo/client";
 import { useNavigate, useParams } from "react-router-dom";
 import { GET_BLOG_INFO } from "../../graphql/queries";
 import { Avatar, Box, Container, Grid, Typography } from "@mui/material";
