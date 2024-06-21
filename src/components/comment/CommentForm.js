@@ -1,10 +1,19 @@
 import React, { useState } from "react";
 import { Button, Grid, TextField, Typography } from "@mui/material";
+import { useMutation } from "@apollo/client";
+import { SEND_COMMENT } from "../../graphql/mutations";
 
 function CommentForm({ slug }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [text, setText] = useState("");
+  const [sendComment, { loading, data, errors }] = useMutation(SEND_COMMENT, {
+    variables: {
+      name,
+      email,
+      text,
+    },
+  });
   return (
     <Grid
       container
