@@ -54,5 +54,4 @@ const GET_AUTHOR_INFO = gql`
     }
   }
 `;
-export { GET_BLOGS_INFO };
-export { GET_AUTHORS_INFO };
+export { GET_BLOGS_INFO, GET_AUTHORS_INFO,GET_AUTHOR_INFO };
