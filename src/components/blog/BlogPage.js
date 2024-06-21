@@ -31,7 +31,13 @@ function BlogPage() {
           />
         </Grid>
         <Grid item xs={12} mt={6}>
-          <img src={data.post.coverPhoto.url} alt={data.post.slug} />
+          <img
+            src={data.post.coverPhoto.url}
+            alt={data.post.slug}
+            width="100%"
+            height={500}
+            style={{borderRadius:15}}
+          />
         </Grid>
       </Grid>
     </Container>
