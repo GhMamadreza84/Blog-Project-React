@@ -50,7 +50,7 @@ function AuthorPage() {
           <Grid container>
             {author.posts.map((post) => (
               <Grid xs={12} sm={6} md={4} key={post.id}>
-                <CardEL />
+                <CardEL  />
               </Grid>
             ))}
           </Grid>
