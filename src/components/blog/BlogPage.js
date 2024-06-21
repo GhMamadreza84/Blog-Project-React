@@ -25,7 +25,10 @@ function BlogPage() {
           >
             {data.post.title}
           </Typography>
-          <ArrowBackRoundedIcon onClick={() => navigate(-1)} />
+          <ArrowBackRoundedIcon
+            onClick={() => navigate(-1)}
+            sx={{ cursor: "pointer" }}
+          />
         </Grid>
       </Grid>
     </Container>
