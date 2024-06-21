@@ -2,6 +2,7 @@ import { useQuery } from "@apollo/client";
 import React from "react";
 import { useParams } from "react-router-dom";
 import { GET_BLOG_INFO } from "../../graphql/queries";
+import { Container, Grid } from "@mui/material";
 
 function BlogPage() {
   const { slug } = useParams();
@@ -12,7 +13,13 @@ function BlogPage() {
   });
   console.log(data);
   // console.log(params);
-  return <div>BlogPage</div>;
+  return(
+    <Container maxWidth="lg">
+      <Grid contianer>
+
+      </Grid>
+    </Container>
+  );
 }
 
 export default BlogPage;
