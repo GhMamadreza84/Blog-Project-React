@@ -16,6 +16,7 @@ function AuthorPage() {
   if (loading) return <h3>Loading ...</h3>;
   if (errors) return <h3>Errors ...</h3>;
   console.log(data);
+  const { author } = data;
   return (
     <Container maxWidth="lg">
       <Grid container mt={10}>
@@ -26,16 +27,16 @@ function AuthorPage() {
           flexDirection="column"
           alignItems="center"
         >
-          <Avatar
-            src={data.author.avatar.url}
-            sx={{ width: 250, height: 250 }}
-          />
+          <Avatar src={author.avatar.url} sx={{ width: 250, height: 250 }} />
           <Typography component="h3" variant="h5" fontWeight={700} mt={4}>
-            {data.author.name}
+            {author.name}
           </Typography>
           <Typography component="h3" variant="h5" color="text.secondary" mt={2}>
-            {data.author.field}
+            {author.field}
           </Typography>
+        </Grid>
+        <Grid item xs={12}>
+          {author.description.html}
         </Grid>
       </Grid>
     </Container>
