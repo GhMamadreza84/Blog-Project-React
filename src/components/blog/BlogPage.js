@@ -43,6 +43,9 @@ function BlogPage() {
               src={data.post.author.avatar.url}
               sx={{ width: 80, height: 80, marginLeft: 2 }}
             />
+            <Typography component="p" variant="h5" fontWeight={700}>
+              {data.post.author.name}
+            </Typography>
           </Grid>
         </Grid>
       </Grid>
