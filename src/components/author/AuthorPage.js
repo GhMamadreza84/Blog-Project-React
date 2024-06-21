@@ -47,11 +47,14 @@ function AuthorPage() {
           <Typography component="h3" variant="h5" fontWeight={700}>
             مقالات {author.name}
           </Typography>
-          <Grid container>
+          <Grid container spacing={2} mt={2}>
             {author.posts.map((post) => (
-              <Grid xs={12} sm={6} md={4} key={post.id} ml={2} mt={2}>
-                <CardEL title={post.title} slug={post.slug} coverPhoto={post.coverPhoto} />
-                
+              <Grid xs={12} sm={6} md={4} key={post.id} >
+                <CardEL
+                  title={post.title}
+                  slug={post.slug}
+                  coverPhoto={post.coverPhoto}
+                />
               </Grid>
             ))}
           </Grid>
