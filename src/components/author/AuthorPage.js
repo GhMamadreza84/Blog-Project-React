@@ -49,8 +49,8 @@ function AuthorPage() {
           </Typography>
           <Grid container>
             {author.posts.map((post) => (
-              <Grid xs={12} sm={6} md={4} key={post.id} ml={1}>
-                <CardEL title={post.title} slug={post.slug} coverPhoto={post.coverPhoto} author={author} />
+              <Grid xs={12} sm={6} md={4} key={post.id} ml={2} mt={2}>
+                <CardEL title={post.title} slug={post.slug} coverPhoto={post.coverPhoto} />
                 
               </Grid>
             ))}
