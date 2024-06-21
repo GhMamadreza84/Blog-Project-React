@@ -2,7 +2,7 @@ import { useQuery } from "@apollo/client";
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { GET_BLOG_INFO } from "../../graphql/queries";
-import { Container, Grid, Typography } from "@mui/material";
+import { Avatar, Container, Grid, Typography } from "@mui/material";
 import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
 function BlogPage() {
   const { slug } = useParams();
@@ -36,8 +36,14 @@ function BlogPage() {
             alt={data.post.slug}
             width="100%"
             height={500}
-            style={{borderRadius:15}}
+            style={{ borderRadius: 15 }}
           />
+          <Grid item xs={12} mt={7}>
+            <Avatar
+              src={data.post.author.avatar.url}
+              sx={{ width: 80, height: 80, marginLeft: 2 }}
+            />
+          </Grid>
         </Grid>
       </Grid>
     </Container>
