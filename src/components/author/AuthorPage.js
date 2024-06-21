@@ -1,7 +1,7 @@
 import React from "react";
 import { useQuery } from "@apollo/client";
 import { useParams } from "react-router-dom";
-
+import sanitize from "sanitize-html";
 import { GET_AUTHOR_INFO } from "../../graphql/queries";
 import { Avatar, Container, Grid, Typography } from "@mui/material";
 
@@ -37,7 +37,9 @@ function AuthorPage() {
         </Grid>
         <Grid item xs={12}>
           <div
-            dangerouslySetInnerHTML={{ __html: author.description.html }}
+            dangerouslySetInnerHTML={{
+              __html: sanitize(author.description.html),
+            }}
           ></div>
         </Grid>
       </Grid>
