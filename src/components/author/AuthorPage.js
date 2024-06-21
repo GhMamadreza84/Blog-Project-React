@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import sanitizeHtml from "sanitize-html";
 import { GET_AUTHOR_INFO } from "../../graphql/queries";
 import { Avatar, Container, Grid, Typography } from "@mui/material";
+import CardEL from "../shared/CardEL";
 
 function AuthorPage() {
   const { slug } = useParams();
@@ -46,6 +47,13 @@ function AuthorPage() {
           <Typography component="h3" variant="h5" fontWeight={700}>
             مقالات {author.name}
           </Typography>
+          <Grid container>
+            {author.posts.map((post) => (
+              <Grid xs={12} sm={6} md={4} key={post.id}>
+                <CardEL />
+              </Grid>
+            ))}
+          </Grid>
         </Grid>
       </Grid>
     </Container>
