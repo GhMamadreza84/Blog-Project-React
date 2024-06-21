@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Button, Grid, TextField, Typography } from "@mui/material";
 import { useMutation } from "@apollo/client";
 import { SEND_COMMENT } from "../../graphql/mutations";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function CommentForm({ slug }) {
   const [name, setName] = useState("");
@@ -19,7 +21,9 @@ function CommentForm({ slug }) {
     if (name && text && email) {
       sendComment();
     } else {
-      
+      toast.warn("تمام فیلد هارا پر کنید", {
+        position: "top-center",
+      });
     }
   };
   return (
@@ -77,6 +81,7 @@ function CommentForm({ slug }) {
           ارسال
         </Button>
       </Grid>
+      <ToastContainer />
     </Grid>
   );
 }
