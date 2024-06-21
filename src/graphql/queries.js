@@ -32,5 +32,27 @@ const GET_AUTHORS_INFO = gql`
   }
 `;
 
+const GET_AUTHOR_INFO = gql`
+  query getAuthorInfo(){
+    author(where: {slug:""}){
+      avatar{
+        url
+      }
+      field
+      name
+      description{
+        html
+      }
+      posts{
+        coverPhoto{
+          url
+        }
+        id
+        slug
+        title
+      }
+    }
+  }
+`;
 export { GET_BLOGS_INFO };
 export { GET_AUTHORS_INFO };
