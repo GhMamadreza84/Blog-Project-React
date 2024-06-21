@@ -3,6 +3,7 @@ import { useQuery } from "@apollo/client";
 import { useParams } from "react-router-dom";
 
 import { GET_AUTHOR_INFO } from "../../graphql/queries";
+import { Container } from "@mui/material";
 
 function AuthorPage() {
   const { slug } = useParams();
@@ -15,7 +16,11 @@ function AuthorPage() {
   if (loading) return <h3>Loading ...</h3>;
   if (errors) return <h3>Errors ...</h3>;
   console.log(data);
-  return <div>Author page</div>;
+  return 
+  <Container maxWidth="lg" >
+
+  </Container>
+  ;
 }
 
 export default AuthorPage;
