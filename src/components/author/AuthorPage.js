@@ -1,11 +1,9 @@
-import React from 'react'
+import React from "react";
+import { useParams } from "react-router-dom";
 
 function AuthorPage() {
-  return (
-    <div>
-      Author page
-    </div>
-  )
+  const params = useParams();
+  return <div>Author page</div>;
 }
 
-export default AuthorPage
+export default AuthorPage;
