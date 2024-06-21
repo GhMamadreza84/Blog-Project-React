@@ -11,6 +11,10 @@ function AuthorPage() {
       slug,
     },
   });
+  
+  if (loading) return <h3>Loading ...</h3>;
+  if (errors) return <h3>Errors ...</h3>;
+  console.log(data);
   return <div>Author page</div>;
 }
 
