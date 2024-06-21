@@ -3,22 +3,12 @@ import { useQuery } from "@apollo/client";
 import { GET_AUTHORS_INFO } from "../../graphql/queries";
 import { Avatar, Divider, Grid, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
-import { TailSpin } from "react-loader-spinner";
+import Loader from "../shared/Loader";
 
 function Authors() {
   const { loading, data, errors } = useQuery(GET_AUTHORS_INFO);
 
-  if (loading)
-    return (
-      <TailSpin
-        visible={true}
-        height="80"
-        width="80"
-        color="gray"
-        ariaLabel="tail-spin-loading"
-        radius="1"
-      />
-    );
+  if (loading) return <Loader />;
   if (errors) return <h3>Errors ...</h3>;
   console.log(data);
   const { authors } = data;

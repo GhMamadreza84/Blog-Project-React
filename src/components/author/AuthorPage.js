@@ -1,11 +1,11 @@
 import React from "react";
 import { useQuery } from "@apollo/client";
 import { useParams } from "react-router-dom";
-import { TailSpin } from "react-loader-spinner";
 import { Avatar, Container, Grid, Typography } from "@mui/material";
 import { GET_AUTHOR_INFO } from "../../graphql/queries";
 import sanitizeHtml from "sanitize-html";
 import CardEL from "../shared/CardEL";
+import Loader from "../shared/Loader";
 
 function AuthorPage() {
   const { slug } = useParams();
@@ -15,17 +15,7 @@ function AuthorPage() {
     },
   });
 
-  if (loading)
-    return (
-      <TailSpin
-        visible={true}
-        height="80"
-        width="80"
-        color="gray"
-        ariaLabel="tail-spin-loading"
-        radius="1"
-      />
-    );
+  if (loading) return <Loader />;
   if (errors) return <h3>Errors ...</h3>;
   console.log(data);
   const { author } = data;

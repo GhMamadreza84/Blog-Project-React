@@ -1,24 +1,17 @@
 import React from "react";
 import { Grid } from "@mui/material";
 import { useQuery } from "@apollo/client";
-import { TailSpin } from "react-loader-spinner";
 
 import { GET_BLOGS_INFO } from "../../graphql/queries";
 import CardEL from "../shared/CardEL";
+import Loader from "../shared/Loader";
 
 function Blogs() {
   const { loading, data, errors } = useQuery(GET_BLOGS_INFO);
 
   if (loading)
     return (
-      <TailSpin
-        visible={true}
-        height="80"
-        width="80"
-        color="gray"
-        ariaLabel="tail-spin-loading"
-        radius="1"
-      />
+      <Loader />
     );
   if (errors) return <h3>Error ...</h3>;
   console.log(data);
