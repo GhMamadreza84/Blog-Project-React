@@ -3,7 +3,7 @@ import { useQuery } from "@apollo/client";
 import { useParams } from "react-router-dom";
 
 import { GET_AUTHOR_INFO } from "../../graphql/queries";
-import { Avatar, Container, Grid } from "@mui/material";
+import { Avatar, Container, Grid, Typography } from "@mui/material";
 
 function AuthorPage() {
   const { slug } = useParams();
@@ -21,6 +21,8 @@ function AuthorPage() {
       <Grid container>
         <Grid item>
           <Avatar src={data.author.avatar.url} />
+          <Typography component="h3" variant="h5">{data.author.name}</Typography>
+          <Typography component="h3" variant="h5">{data.author.field}</Typography>
         </Grid>
       </Grid>
     </Container>
