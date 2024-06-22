@@ -37,7 +37,7 @@ function CommentForm({ slug }) {
   return (
     <Grid
       container
-      sx={{
+      sx={{ 
         boxShadow: "rgba(0,0,0,0.1) 0px 4px 12px",
         borderRadius: 4,
         py: 1,
