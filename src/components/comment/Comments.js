@@ -1,7 +1,7 @@
 import { useQuery } from "@apollo/client";
 import React from "react";
 import { GET_POST_COMMENT } from "../../graphql/queries";
-import { Grid, Typography } from "@mui/material";
+import { Avatar, Box, Grid, Typography } from "@mui/material";
 
 function Comments({ slug }) {
   const { loading, data, errors } = useQuery(GET_POST_COMMENT, {
@@ -24,6 +24,21 @@ function Comments({ slug }) {
         <Typography component="p" variant="h6" fontWeight={700} color="primary">
           کامنت ها
         </Typography>
+        {data.comments.map((comment) => {
+          <Grid
+            item
+            xs={12}
+            key={comment.id}
+            m={2}
+            p={2}
+            border="1px solid silver"
+            borderRadius={1}
+          >
+            <Box>
+              <Avatar>{comment.name[0]}</Avatar>
+            </Box>
+          </Grid>;
+        })}
       </Grid>
     </Grid>
   );
