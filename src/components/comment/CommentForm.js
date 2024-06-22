@@ -29,15 +29,15 @@ function CommentForm({ slug }) {
     }
   };
 
-  if(data){
-    toast.success("کامنت ارسال شد و منتظر تایید می باشد",{
-      position:"top-center"
-    })
+  if (data) {
+    toast.success("کامنت ارسال شد و منتظر تایید می باشد", {
+      position: "top-center",
+    });
   }
   return (
     <Grid
       container
-      sx={{ 
+      sx={{
         boxShadow: "rgba(0,0,0,0.1) 0px 4px 12px",
         borderRadius: 4,
         py: 1,
@@ -86,7 +86,9 @@ function CommentForm({ slug }) {
       </Grid>
       <Grid item xs={12} m={2}>
         {loading ? (
-          <Button variant="contained" disabled>در حال ارسال ....</Button>
+          <Button variant="contained" disabled>
+            در حال ارسال ....
+          </Button>
         ) : (
           <Button variant="contained" onClick={sendHandler}>
             ارسال
