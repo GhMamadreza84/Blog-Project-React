@@ -77,7 +77,7 @@ const GET_BLOG_INFO = gql`
 `;
 const GET_POST_COMMENT = gql`
   query getPostComment($slug: String!) {
-    commments(where: { post: { slug: $slug } }){
+    comments(where: { post: { slug: $slug } }){
       id
       name
       text
