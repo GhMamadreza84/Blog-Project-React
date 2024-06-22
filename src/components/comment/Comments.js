@@ -24,7 +24,7 @@ function Comments({ slug }) {
         <Typography component="p" variant="h6" fontWeight={700} color="primary">
           کامنت ها
         </Typography>
-        {data.comments.map((comment) => {
+        {/* {data.comments.map((comment) => {
           <Grid
             item
             xs={12}
@@ -38,7 +38,7 @@ function Comments({ slug }) {
               <Avatar>{comment.name[0]}</Avatar>
             </Box>
           </Grid>;
-        })}
+        })} */}
       </Grid>
     </Grid>
   );
